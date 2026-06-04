@@ -1,0 +1,1062 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body class="font-serif">
+    <nav class="z-10 top-0 sticky w-full text-white bg-[#FDF9F4]">
+      <div class="mx-auto px-4 py-4 flex items-center justify-around">
+        <a
+          href="index.html"
+          class="text-[#181818] text-[18px] font-medium font(sans:Poppins)"
+        >
+          Maison Luxe
+        </a>
+
+        <ul
+          class="hidden lg:flex items-center gap-1 text-sm font-medium text-white justify-evenly pl-[300px]"
+        >
+          <li>
+            <a
+              href="index.html"
+              class="px-3 py-2 text-[#303030] hover:text-[#181818] transition-colors"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="shop.html"
+              class="px-3 py-2 text-[#303030] hover:text-[#181818] transition-colors"
+              >Shop</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="px-3 py-2 text-[#303030] hover:text-[#181818] transition-colors"
+              >Collections</a
+            >
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="px-3 py-2 text-[#303030] hover:text-[#181818]"
+              >Contact</a
+            >
+          </li>
+
+          <li
+            class="border border-[#303030] rounded-full px-6 py-2 w-full justify-center"
+          >
+            <input
+              type="text"
+              placeholder="Search for your product"
+              class="outline-none pl-2 text-[#303030] bg-transparent"
+            />
+            <i class="fa-solid fa-magnifying-glass text-[#303030]"></i>
+          </li>
+
+          <ul
+            class="ml-[15px] lg:flex items-center gap-6 font-medium text-white justify-evenly"
+          >
+            <li class="flex gap-5 justify-center">
+              <i
+                class="fa-regular fa-heart text-[#303030] hover:text-[#181818]"
+              ></i>
+            </li>
+            <li>
+              <a href="login.html"
+                ><i
+                  class="fa-regular fa-user text-[#303030] hover:text-[#181818]"
+                ></i
+              ></a>
+            </li>
+            <li>
+              <i
+                class="fa-solid fa-cart-shopping text-[#303030] hover:text-[#181818]"
+              ></i>
+            </li>
+          </ul>
+        </ul>
+
+        <!-- for Hamburger right Button -->
+        <label
+          for="menu-toggle"
+          class="lg:hidden text-[#181818] text-xl cursor-pointer"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </label>
+      </div>
+
+      <input type="checkbox" id="menu-toggle" class="hidden peer" />
+
+      <!-- mobile dropdown menu -->
+      <div class="hidden peer-checked:block lg:hidden bg-[#FDF9F4] px-6 py-4">
+        <ul class="flex flex-col gap-5 mb-3 text-sm font-medium">
+          <li>
+            <a
+              href="index.html"
+              class="text-[#303030] hover:text-[#181818] font-semibold"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="shop.html"
+              class="text-[#303030] hover:text-[#181818] font-semibold"
+              >Shop</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-[#303030] hover:text-[#181818] font-semibold"
+              >Collections</a
+            >
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="text-[#303030] hover:text-[#181818] font-semibold"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a
+              href="cart.html"
+              class="bg-[#271C19] hover:bg-[#60463B] text-[#fdf9f4] hover:text-[#fdf9f4] px-6 py-2 rounded-lg text-xs font-semibold inline-block text-center w-full"
+              >Cart</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section
+      class="grid grid-cols-1 lg:grid-cols-2 items-center bg-[#F6EFE7 bg-[#E8D8CC] p-10 gap-6"
+    >
+      <div class="relative ">
+        <img
+          src="images/hero img.png"
+          alt=""
+          class="lg:w-[90%] w-full h-[500px] object-cover rounded-2xl brightness-[65%]"
+        />
+        <div
+          class="absolute hidden lg:block top-6 -left-6 bg-white w-[100px] h-[60px] px-2 rounded-lg"
+        >
+          <ul>
+            <li class="text-[14px] font-semibold">Best Seller</li>
+            <li class="text-[12px] font-medium">Luna Dress</li>
+            <li class="text-[14px] font-semibold">$150</li>
+          </ul>
+        </div>
+
+        <div
+          class="absolute hidden lg:block bottom-4 right-0 bg-white w-[150px] h-[60px] px-2 py-2 rounded-lg"
+        >
+          <ul class="flex gap-2 align-center">
+            <i
+              class="fa-solid fa-star text-brown bg-[#E8D8CC] text-[#271C19] p-2 rounded-full"
+            ></i>
+            <li class="text-[14px] font-semibold">4.9 / 5.0</li>
+          </ul>
+          <p class="text-[12px] font-medium">12K+ satisfied customers</p>
+        </div>
+      </div>
+
+      <div>
+        <ul
+          class="flex gap-2 font-serif bg-[#fdf9f4] w-[190px] mb-4 px-2 py-1 rounded-full justify-center text-[14px] text-[#303030]"
+        >
+          <li><i class="fa-solid fa-star-half-stroke text-[#271C19]"></i></li>
+          <p class="">Spring Atelier 2026</p>
+        </ul>
+
+        <h2
+          class="font-semibold text-5xl mb-4 text-[#271C19] font-serif leading-[60px]"
+        >
+          Elevate your everyday style.
+        </h2>
+
+        <p class="text-lg leading-9 mb-4 text-[#303030] font-serif">
+          A curated boutique of timeless silhouettes, soft fabrics and quiet
+          luxury - made for the woman who dresses with intention.
+        </p>
+
+        <div class="flex gap-6">
+          <div
+            class="flex items-center justify-center bg-[#271C19] hover:bg-[#60463B] text-[#fdf9f4] hover:text-[#fdf9f4] font-medium w-[140px] gap-2 text-center rounded-full px-3 py-3"
+          >
+            <button class="">Shop Now</button>
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+          <button
+            class="bg-[#fdf9f4] hover:bg-[#60463B] hover:text-[#fdf9f4] text-[#271C19] font-medium -[140px] rounded-full px-3 py-3"
+          >
+            New Collections
+          </button>
+        </div>
+      </div>
+    </section>
+    <div
+      class="bg-[#Fdf9f4] flex justify-items-center text-[14px] font-medium gap-14 justify-between p-10"
+    >
+      <div class="bg-[#Fdf9f4] pt-[70px]">
+        <p class="text-[14px] font-medium text-[#BDA06E]">Shop by category</p>
+        <h3 class="text-[36px]">Find your signature.</h3>
+      </div>
+      <ul class="flex items-center gap-2">
+        <li>View All</li>
+        <i class="fa-solid fa-arrow-right"></i>
+      </ul>
+    </div>
+    <section
+      class="grid grid-cols-2 md:grid-cols-3 justify-items-center lg:grid-cols-6 bg-[#Fdf9f4] flex gap-3 p-10"
+    >
+      <div class="text-center mb-[50px] group overflow-hidden">
+        <div
+          class="w-[160px] h-[160px] rounded-full bg-[#F6EFE7] flex items-center justify-center"
+        >
+          <img
+            src="images/image 1.png"
+            alt=""
+            class="w-[120px] h-[120px] rounded-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+          />
+        </div>
+
+        <p class="text-[14px] mt-4 font-medium">Women</p>
+        <p class="text-[12px] font-medium">234 Items</p>
+      </div>
+
+      <div class="text-center">
+        <div
+          class= "group overflow-hidden w-[160px] h-[160px] rounded-full bg-[#F6EFE7] flex items-center justify-center"
+        >
+          <img
+            src="images/collection-banner-2.jpg"
+            alt=""
+            class="w-[120px] h-[120px] rounded-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+          />
+        </div>
+        <p class="text-[14px] mt-4 font-medium">Men</p>
+        <p class="text-[12px] font-medium">234 Items</p>
+      </div>
+      <div class="text-center">
+        <div
+          class="group overflow-hidden w-[160px] h-[160px] rounded-full bg-[#F6EFE7] flex items-center justify-center"
+        >
+          <img
+            src="images/product-3.jpg"
+            alt=""
+            class="w-[120px] h-[120px] rounded-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+          />
+        </div>
+        <p class="text-[14px] mt-4 font-medium">Accessories</p>
+        <p class="text-[12px] font-medium">234 Items</p>
+      </div>
+      <div class="text-center">
+        <div
+          class="group overflow-hidden w-[160px] h-[160px] rounded-full bg-[#F6EFE7] flex items-center justify-center"
+        >
+          <img
+            src="images/product-4-.jpg"
+            alt=""
+            class="w-[120px] h-[120px] rounded-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+          />
+        </div>
+        <p class="text-[14px] mt-4 font-medium">Shoes</p>
+        <p class="text-[12px] font-medium">234 Items</p>
+      </div>
+      <div class="text-center">
+        <div
+          class="group overflow-hidden w-[160px] h-[160px] rounded-full bg-[#F6EFE7] flex items-center justify-center"
+        >
+          <img
+            src="images/product-5.jpg"
+            alt=""
+            class="w-[120px] h-[120px] rounded-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+          />
+        </div>
+        <p class="text-[14px] mt-4 font-medium">Beauty</p>
+        <p class="text-[12px] font-medium">234 Items</p>
+      </div>
+      <div class="text-center">
+        <div
+          class="group overflow-hidden w-[160px] h-[160px] rounded-full bg-[#F6EFE7] flex items-center justify-center"
+        >
+          <img
+            src="images/product-6.jpg"
+            alt=""
+            class="w-[120px] h-[120px] rounded-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+          />
+        </div>
+        <p class="text-[14px] mt-4 font-medium">Bags</p>
+        <p class="text-[12px] font-medium">234 Items</p>
+      </div>
+    </section>
+
+    <section class="bg-[#Fdf9f4] py-12 px-4 md:px-8">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 bg-[#F6EFE7] w-full max-w-7xl mx-auto p-6 md:p-8 rounded-2xl shadow-md gap-10"
+      >
+        <div class="">
+          <p class="text-[14px] font-medium mb-3">Limited time</p>
+          <h2 class="text-[32px] font-semibold mb-3">
+            Flash sale, <br />
+            Up to 40% off.
+          </h2>
+          <p class="text-[16px] font-medium mb-3">
+            A curated edit of season-defining pieces, refined for <br />
+            those who notice the detail.
+          </p>
+          <div
+            class="flex items-center justify-center bg-[#271C19] hover:bg-[#60463B] w-[140px] gap-2 text-center text-[#fdf9f4] hover:text-[#fdf9f4] rounded-full px-3 py-3"
+          >
+            <button class="text-[14px]">Shop Now</button>
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+        <div
+          class="flex flex-wrap gap-6 justify-center justify-items-center items-center items-center"
+        >
+          <div
+            class="bg-[#Fdf9f4] w-20 h-20 md:w-28 md:h-28 rounded-[20px] flex flex-col items-center justify-center"
+          >
+            <h1 id="displayCountdown" class="text-[32px] font-serif"></h1>
+            <p class="text-gray-500 mt-4">DAYS</p>
+          </div>
+
+          <div
+            class="bg-[#Fdf9f4] w-20 h-20 md:w-28 md:h-28 rounded-[20px] flex flex-col items-center justify-center"
+          >
+            <h1 id="displayHours" class="text-[32px] font-serif"></h1>
+            <p class="text-gray-500 mt-4">HOURS</p>
+          </div>
+
+          <div
+            class="bg-[#Fdf9f4] w-20 h-20 md:w-28 md:h-28 rounded-[20px] flex flex-col items-center justify-center"
+          >
+            <h1 id="displayMinutes" class="text-[32px] font-serif"></h1>
+            <p class="text-gray-500 mt-4">MINUTES</p>
+          </div>
+
+          <div
+            class="bg-[#Fdf9f4] w-20 h-20 md:w-28 md:h-28 rounded-[20px] flex flex-col items-center justify-center"
+          >
+            <h1 id="displaySeconds" class="text-[32px] font-serif"></h1>
+            <p class="text-gray-500 mt-4">SECONDS</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="bg-[#Fdf9f4] flex justify-items-center justify-between p-10 text-[14px] font-medium gap-14 pt-[50px]"
+    >
+      <div class="bg-[#Fdf9f4] pt-[70px]">
+        <p class="text-[14px] font-medium text-[#BDA06E]">Today's offer</p>
+        <h3 class="text-[36px]">Editor's Picks.</h3>
+      </div>
+      <ul class="flex items-center gap-2 ml-[550px">
+        <li>View All</li>
+        <i class="fa-solid fa-arrow-right"></i>
+      </ul>
+    </div>
+
+    <section
+      class="pb-[70px] justify-items-center gap-5 bg-[#fdf9f4] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-10"
+    >
+      <div class="relative w-fit hover:shadow-md overflow-hidden rounded-3xl group hover:scale-105 transition-all duration-300">
+        <div class="group relative justify-items-center  ">
+          <img
+            src="images/product-5.jpg"
+            alt=""
+            class="object-cover rounded-2xl h-[300px] w-[320px]"
+          />
+          <!-- div hover:add to cart button -->
+          <div
+            class="hidden group-hover:block items-center absolute bottom-4 bg-[#BDA06E] w-[260px] gap-2 text-center text-[#fdf9f4] rounded-full px-6 py-2"
+          >
+            <button class="text-[14px]">Add To Cart</button>
+
+            <i class="fa-solid fa-cart-shopping text-[#fdf9f4]"></i>
+          </div>
+        </div>
+        <div class="mt-[10px] p-4">
+          <ul class="flex justify-between items-center">
+            <li class="text-[10px] font-normal">KNITWEAR</li>
+            <li class="text-[12px] font-normal flex items-center gap-1">
+              <i
+                class="fa-solid fa-star text-[#BDA06E] text-[10px] font-normal rounded-full"
+              ></i>
+              4.8
+            </li>
+          </ul>
+
+          <p class="font-semibold text-[14px]">Soft Knit Pullover</p>
+          <p class="font-semibold text-[14px] flex gap-3">
+            <span>$150 </span>
+            <span class="font-light text-[14px] line-through">$240</span>
+          </p>
+
+          <p
+            class="absolute top-2 left-2 bg-[#FDF9F4] rounded-full px-2 text-[14px] font-normal"
+          >
+            -32%
+          </p>
+          <p
+            class="flex items-center justify-center absolute top-2 right-2 bg-[#FDF9F4] h-[25px] w-[25px] rounded-full text-[#303030]"
+          >
+            <i class="fa-regular fa-heart text-[14px]"></i>
+          </p>
+        </div>
+      </div>
+
+      <div class="relative w-fit hover:shadow-md overflow-hidden rounded-3xl group hover:scale-105 transition-all duration-300">
+        <div class="group relative justify-items-center">
+          <img
+            src="images/product-3.jpg"
+            alt=""
+            class="object-cover rounded-2xl h-[300px] w-[320px]"
+          />
+          <div
+            class="hidden group-hover:block items-center absolute bottom-4 bg-[#BDA06E] w-[260px] gap-2 text-center text-[#fdf9f4] rounded-full px-6 py-2"
+          >
+            <button class="text-[14px]">Add To Cart</button>
+
+            <i class="fa-solid fa-cart-shopping text-[#fdf9f4]"></i>
+          </div>
+        </div>
+        <div class="mt-[10px] p-4">
+          <ul class="flex justify-between items-center">
+            <li class="text-[10px] font-normal">ACCESSORIES</li>
+            <li class="text-[12px] font-normal flex items-center gap-1">
+              <i
+                class="fa-solid fa-star text-[#BDA06E] text-[10px] font-normal rounded-full"
+              ></i>
+              4.5
+            </li>
+          </ul>
+
+          <p class="font-semibold text-[14px]">Blush Silk Scarf</p>
+          <p class="font-semibold text-[14px] flex gap-3">
+            <span>$130 </span>
+            <span class="font-light text-[14px] line-through">$260</span>
+          </p>
+
+          <p
+            class="absolute top-2 left-2 bg-[#FDF9F4] rounded-full px-2 text-[14px] font-normal"
+          >
+            -32%
+          </p>
+          <p
+            class="flex items-center justify-center absolute top-2 right-2 bg-[#FDF9F4] h-[25px] w-[25px] rounded-full text-[#303030]"
+          >
+            <i class="fa-regular fa-heart text-[14px]"></i>
+          </p>
+        </div>
+      </div>
+
+      <div class="relative w-fit hover:shadow-md overflow-hidden rounded-3xl group hover:scale-105 transition-all duration-300">
+        <div class="group relative justify-items-center">
+          <img
+            src="images/product-6.jpg"
+            alt=""
+            class="object-cover rounded-2xl h-[300px] w-[320px]"
+          />
+          <div
+            class="hidden group-hover:block items-center absolute bottom-4 bg-[#BDA06E] w-[260px] gap-2 text-center text-[#fdf9f4] rounded-full px-6 py-2"
+          >
+            <button class="text-[14px]">Add To Cart</button>
+
+            <i class="fa-solid fa-cart-shopping text-[#fdf9f4]"></i>
+          </div>
+        </div>
+        <div class="mt-[10px] p-4">
+          <ul class="flex justify-between items-center">
+            <li class="text-[10px] font-normal">BAGS</li>
+            <li class="text-[12px] font-normal flex items-center gap-1">
+              <i
+                class="fa-solid fa-star text-[#BDA06E] text-[10px] font-normal rounded-full"
+              ></i>
+              4.7
+            </li>
+          </ul>
+
+          <p class="font-semibold text-[14px]">Ara Leather Tote</p>
+          <p class="font-semibold text-[14px] flex gap-3">
+            <span>$100 </span>
+            <span class="font-light text-[14px] line-through">$220</span>
+          </p>
+
+          <p
+            class="absolute top-2 left-2 bg-[#FDF9F4] rounded-full px-2 text-[14px] font-normal"
+          >
+            -32%
+          </p>
+          <p
+            class="flex items-center justify-center absolute top-2 right-2 bg-[#FDF9F4] h-[25px] w-[25px] rounded-full text-[#303030]"
+          >
+            <i class="fa-regular fa-heart text-[14px]"></i>
+          </p>
+        </div>
+      </div>
+
+      <div class="relative w-fit hover:shadow-md overflow-hidden rounded-3xl group hover:scale-105 transition-all duration-300">
+        <div class="group relative justify-items-center">
+          <img
+            src="images/product-4-.jpg"
+            alt=""
+            class="object-cover rounded-2xl h-[300px] w-[320px]"
+          />
+          <div
+            class="hidden group-hover:block items-center absolute bottom-4 bg-[#BDA06E] w-[260px] gap-2 text-center text-[#fdf9f4] rounded-full px-6 py-2"
+          >
+            <button class="text-[14px]">Add To Cart</button>
+
+            <i class="fa-solid fa-cart-shopping text-[#fdf9f4]"></i>
+          </div>
+        </div>
+        <div class="mt-[10px] p-4">
+          <ul class="flex justify-between items-center">
+            <li class="text-[10px] font-normal">SHOES</li>
+            <li class="text-[12px] font-normal flex items-center gap-1">
+              <i
+                class="fa-solid fa-star text-[#BDA06E] text-[10px] font-normal rounded-full"
+              ></i>
+              4.9
+            </li>
+          </ul>
+
+          <p class="font-semibold text-[14px]">Nude Pointed Pump</p>
+          <p class="font-semibold text-[14px] flex gap-3">
+            <span>$180 </span>
+            <span class="font-light text-[14px] line-through">$260</span>
+          </p>
+
+          <p
+            class="absolute top-2 left-2 bg-[#FDF9F4] rounded-full px-2 text-[14px] font-normal"
+          >
+            -32%
+          </p>
+          <p
+            class="flex items-center justify-center absolute top-2 right-2 bg-[#FDF9F4] h-[25px] w-[25px] rounded-full text-[#303030]"
+          >
+            <i class="fa-regular fa-heart text-[14px]"></i>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="grid lg:grid-cols-2 grid-cols-1 gap-6 p-[30px] bg-[#fdf9f4] items-center justify-items-center"
+    >
+      <div>
+        <img
+          src="images/collection-banner-2.jpg"
+          alt=""
+          class="object-cover rounded-3xl"
+        />
+      </div>
+
+      <div class="">
+        <p class="text-[14px] font-medium mb-5 text-[#BDA06E]">
+          Featured collection
+        </p>
+        <h2 class="text-[32px] font-semibold mb-3">
+          Quiet luxury,<br />loud confidence.
+        </h2>
+        <p class="text-[14px] font-medium mb-10">
+          Tailored cashmere, butter-soft leather and silhouettes designed <br />
+          to live with you - season after season.
+        </p>
+        <div
+          class="flex items-center justify-center bg-[#BDA06E] hover:bg-[#60463B] w-[140px] gap-2 text-center text-[#fdf9f4] hover:text-[#fdf9f4] rounded-full px-3 py-3 transition-all hover:scale-105 duration-300 "
+        >
+          <button class="text-[14px]">Discover</button>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+    </section>
+
+    <div class="items-center bg-[#fdf9f4] pt-[50px]">
+      <p class="text-[#BDA06E] flex justify-center">Latest</p>
+      <h2 class="text-[32px] font-semibold flex justify-center">
+        New Arrivals
+      </h2>
+    </div>
+
+    <section
+      class="bg-[#fdf9f4] gap-5 pt-[50px] grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-items-center"
+    >
+      <div class="relative hover:shadow-md overflow-hidden rounded-3xl group hover:scale-105 transition-all duration-300 ">
+        <div class="group relative justify-items-center">
+          <img
+            src="images/product-5.jpg"
+            alt=""
+            class="object-cover rounded-3xl h-[400px] w-[360px]"
+          />
+          <!-- div hover:add to cart button -->
+          <div
+            class="hidden group-hover:block items-center absolute bottom-4 bg-[#BDA06E] w-[320px] gap-2 text-center text-[#fdf9f4] rounded-full px-6 py-2"
+          >
+            <button class="text-[14px]">Add To Cart</button>
+
+            <i class="fa-solid fa-cart-shopping text-[#fdf9f4]"></i>
+          </div>
+        </div>
+        <div class="mt-[10px] p-4">
+          <ul class="flex justify-between items-center">
+            <li class="text-[10px] font-normal">KNITWEAR</li>
+            <li class="text-[12px] font-normal flex items-center gap-1">
+              <i
+                class="fa-solid fa-star text-[#BDA06E] text-[10px] font-normal rounded-full"
+              ></i>
+              4.8
+            </li>
+          </ul>
+
+          <p class="font-semibold text-[14px]">Soft Knit Pullover</p>
+          <p class="font-semibold text-[14px] flex gap-3">
+            <span>$150 </span>
+          </p>
+
+          <p
+            class="flex items-center justify-center absolute top-2 right-2 bg-[#FDF9F4] h-[25px] w-[25px] rounded-full text-[#303030]"
+          >
+            <i class="fa-regular fa-heart text-[14px]"></i>
+          </p>
+        </div>
+      </div>
+
+      <div class="relative w-fit hover:shadow-md overflow-hidden rounded-3xl group hover:scale-105 transition-all duration-300">
+        <div class=" group relative justify-items-center">
+          <img
+            src="images/product-3.jpg"
+            alt=""
+            class="object-cover rounded-3xl h-[400px] w-[360px]"
+          />
+           <div
+            class="hidden group-hover:block items-center absolute bottom-4 bg-[#BDA06E] w-[320px] gap-2 text-center text-[#fdf9f4] rounded-full px-6 py-2"
+          >
+            <button class="text-[14px]">Add To Cart</button>
+
+            <i class="fa-solid fa-cart-shopping text-[#fdf9f4]"></i>
+          </div>
+        </div>
+        <div class="mt-[10px] p-4">
+          <ul class="flex justify-between items-center">
+            <li class="text-[10px] font-normal">ACCESSORIES</li>
+            <li class="text-[12px] font-normal flex items-center gap-1">
+              <i
+                class="fa-solid fa-star text-[#BDA06E] text-[10px] font-normal rounded-full"
+              ></i>
+              4.5
+            </li>
+          </ul>
+
+          <p class="font-semibold text-[14px]">Blush Silk Scarf</p>
+          <p class="font-semibold text-[14px] flex gap-3">
+            <span>$130 </span>
+          </p>
+
+          <p
+            class="flex items-center justify-center absolute top-2 right-2 bg-[#FDF9F4] h-[25px] w-[25px] rounded-full text-[#303030]"
+          >
+            <i class="fa-regular fa-heart text-[14px]"></i>
+          </p>
+        </div>
+      </div>
+
+      <div class="relative w-fit hover:shadow-md overflow-hidden rounded-3xl group hover:scale-105 transition-all duration-300">
+        <div class="group relative justify-items-center">
+          <img
+            src="images/product-6.jpg"
+            alt=""
+            class="object-cover rounded-3xl h-[400px] w-[360px]"
+          />
+           <div
+            class="hidden group-hover:block items-center absolute bottom-4 bg-[#BDA06E] w-[320px] gap-2 text-center text-[#fdf9f4] rounded-full px-6 py-2"
+          >
+            <button class="text-[14px]">Add To Cart</button>
+
+            <i class="fa-solid fa-cart-shopping text-[#fdf9f4]"></i>
+          </div>
+        </div>
+        <div class="mt-[10px] p-4">
+          <ul class="flex justify-between items-center">
+            <li class="text-[10px] font-normal">BAGS</li>
+            <li class="text-[12px] font-normal flex items-center gap-1">
+              <i
+                class="fa-solid fa-star text-[#BDA06E] text-[10px] font-normal rounded-full"
+              ></i>
+              4.7
+            </li>
+          </ul>
+
+          <p class="font-semibold text-[14px]">Ara Leather Tote</p>
+          <p class="font-semibold text-[14px] flex">
+            <span>$100 </span>
+          </p>
+
+          <p
+            class="flex items-center justify-center absolute top-2 right-2 bg-[#FDF9F4] h-[25px] w-[25px] rounded-full text-[#303030]"
+          >
+            <i class="fa-regular fa-heart text-[14px]"></i>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="items-center bg-[#fdf9f4] pb-[50px] pt-[50px]">
+      <h2 class="text-[32px] font-semibold flex justify-center">
+        Customers Review
+      </h2>
+    </div>
+
+    <section
+      class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 p-[30px] bg-[#fdf9f4] pb-[50px] justify-items-center"
+    >
+      <div class="shadow-md p-6 rounded-2xl  hover:border hover:border-[#BDA06E] hover:rounded-xl text-center hover:scale-105 group transition-all duration-300">
+        <ul class="flex justify-center gap-2">
+          <li>
+            <i
+              class="fa-solid fa-star text-[#BDA06E] text-[10px] font-normal rounded-full"
+            ></i>
+          </li>
+          <li>
+            <i
+              class="fa-solid fa-star text-[#BDA06E] text-[10px] font-normal rounded-full"
+            ></i>
+          </li>
+          <li>
+            <i
+              class="fa-solid fa-star text-[#BDA06E] text-[10px] font-normal rounded-full"
+            ></i>
+          </li>
+          <li>
+            <i
+              class="fa-solid fa-star text-[#BDA06E] text-[10px] font-normal rounded-full"
+            ></i>
+          </li>
+          <li>
+            <i
+              class="fa-solid fa-star text-[#BDA06E] text-[10px] font-normal rounded-full"
+            ></i>
+          </li>
+        </ul>
+        <p class="pt-2 flex justify-center">
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta
+          corrupti unde nobis, asperiores dolores, quam, blanditiis minus quas
+          explicabo aliquam natus doloremque suscipit possimus eius excepturi."
+        </p>
+        <p class="pt-2 font-semibold flex justify-center">
+          Sophia L. - Nigeria
+        </p>
+      </div>
+      <div class="shadow-md p-6 rounded-2xl hover:border hover:border-[#BDA06E] hover:rounded-xl text-center hover:scale-105 group transition-all duration-300">
+        <ul class="flex justify-center gap-2">
+          <li>
+            <i
+              class="fa-solid fa-star text-[#BDA06E] text-[10px] font-normal rounded-full"
+            ></i>
+          </li>
+          <li>
+            <i
+              class="fa-solid fa-star text-[#BDA06E] text-[10px] font-normal rounded-full"
+            ></i>
+          </li>
+          <li>
+            <i
+              class="fa-solid fa-star text-[#BDA06E] text-[10px] font-normal rounded-full"
+            ></i>
+          </li>
+          <li>
+            <i
+              class="fa-solid fa-star text-[#BDA06E] text-[10px] font-normal rounded-full"
+            ></i>
+          </li>
+          <li>
+            <i
+              class="fa-solid fa-star text-[#BDA06E] text-[10px] font-normal rounded-full"
+            ></i>
+          </li>
+        </ul>
+        <p class="pt-2 flex justify-center">
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta
+          corrupti unde nobis, asperiores dolores, quam, blanditiis minus quas
+          explicabo aliquam natus doloremque suscipit possimus eius excepturi."
+        </p>
+        <p class="pt-2 font-semibold flex justify-center">
+          Sophia L. - Nigeria
+        </p>
+      </div>
+      <div class="shadow-md p-6 rounded-2xl hover:border hover:border-[#BDA06E] hover:rounded-xl text-center hover:scale-105 group transition-all duration-300">
+        <ul class="flex justify-center gap-2">
+          <li>
+            <i
+              class="fa-solid fa-star text-[#BDA06E] text-[10px] font-normal rounded-full"
+            ></i>
+          </li>
+          <li>
+            <i
+              class="fa-solid fa-star text-[#BDA06E] text-[10px] font-normal rounded-full"
+            ></i>
+          </li>
+          <li>
+            <i
+              class="fa-solid fa-star text-[#BDA06E] text-[10px] font-normal rounded-full"
+            ></i>
+          </li>
+          <li>
+            <i
+              class="fa-solid fa-star text-[#BDA06E] text-[10px] font-normal rounded-full"
+            ></i>
+          </li>
+          <li>
+            <i
+              class="fa-solid fa-star text-[#BDA06E] text-[10px] font-normal rounded-full"
+            ></i>
+          </li>
+        </ul>
+        <p class="pt-2 flex justify-center">
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta
+          corrupti unde nobis, asperiores dolores, quam, blanditiis minus quas
+          explicabo aliquam natus doloremque suscipit possimus eius excepturi."
+        </p>
+        <p class="pt-2 font-semibold flex justify-center">
+          Sophia L. - Nigeria
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-[#Fdf9f4] h-[500px] p-[30px] justify-items-center">
+      <div
+        class="bg-[#F6EFE7] text-center justify-items-center w-[80%] h-[300px] m-auto mt-[50px] p-6 mt-[40px] rounded-2xl shadow-md"
+      >
+        <p class="text-[#BDA06E] font-medium mb-2">Maisone letters</p>
+        <h2 class="text-[26px] font-medium mb-2">
+          Subscribe for exclusive offers.
+        </h2>
+        <p class="text-[16px] mb-2">
+          New arrivals, atelier stories and private sale previews — delivered
+          <br />
+          with intention.
+        </p>
+        <div class="flex mt-[30px] lg:w-[400px] w-[200px] m-auto">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="flex-1 bg-[#2a2a2a] border border-white/10 border-r-0 rounded-l-full p-2 text-sm text-white placeholder-gray-600 outline-none"
+          />
+          <button
+            class="bg-[#BDA06E] hover:bg-[#271C19] px-5 rounded-r-full transition-colors"
+          >
+            <i
+              class="fa-regular fa-paper-plane text-white text-[20px] text-center"
+            ></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[#2a2a2a] text-[10px] text-white">
+      <div class="max-w-7xl mx-auto px-10 py-16 justify-between">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-14">
+          <div>
+            <h2 class="text-2xl font-bold mb-5 text-white">Maisone Luxe</h2>
+            <p class="text-white text-sm leading-relaxed mb-6">
+              A curated boutique of timeless silhouettes, soft textures and
+              effortless femininity — made for the woman who dresses with
+              intention.
+            </p>
+            <p class="font-semibold text-base mb-3">Follow Our Socials</p>
+
+            <div class="flex gap-3 flex-wrap">
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full border border-[#BDA06E] flex items-center justify-center text-white hover:bg-[#e8412a] hover:border-[#e8412a] hover:text-white transition-all text-sm"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full border border-[#BDA06E] flex items-center justify-center text-white hover:bg-[#e8412a] hover:border-[#e8412a] hover:text-white transition-all text-sm"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full border border-[#BDA06E] flex items-center justify-center text-white hover:bg-[#e8412a] hover:border-[#e8412a] hover:text-white transition-all text-sm"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full border border-[#BDA06E] flex items-center justify-center text-white hover:bg-[#e8412a] hover:border-[#e8412a] hover:text-white transition-all text-sm"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+
+          <div>
+            <h5 class="text-base font-semibold mb-2">Shop</h5>
+            <div class="w-8 h-0.5 bg-[#BDA06E] mb-5"></div>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href=""
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >New Arrival</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >Best Sellers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >Accessories</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >Beauty</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >Sales</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="text-base font-semibold mb-2">Customer Care</h5>
+            <div class="w-8 h-0.5 bg-[#BDA06E] mb-5"></div>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href=""
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                >
+                  Shipping
+                </a>
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >Returns</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >Size Guide</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >FAQs</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="text-base font-semibold mb-2">Company</h5>
+            <div class="w-8 h-0.5 bg-[#BDA06E] mb-5"></div>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >Our Story</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                >
+                  Journal
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >Stores</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >Sustainability</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >Careers</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-[#2a2a2a] border-t border-[#BDA06E]">
+        <div
+          class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-white"
+        >
+          <p class="text-[12px]">
+            &copy; 2026 Maison Atelier. All rights reserved.
+          </p>
+          <div class="flex flex-col md:flex-row text-[12px] items-center gap-4">
+            <div class="flex flex-wrap justify-center gap-4">
+              <a href="#" class="hover:text-white transition-colors"
+                >Privacy Policy</a
+              >
+              <a href="#" class="hover:text-white transition-colors"
+                >Terms of Service</a
+              >
+              <a href="#" class="hover:text-white transition-colors"
+                >Cookie Policy</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body class="font-serif">
+    <nav class="z-10 top-0 sticky w-full text-white bg-[#FDF9F4]">
+      <div class="mx-auto px-4 py-4 flex items-center justify-around">
+        <a
+          href="index.html"
+          class="text-[#181818] text-[18px] font-medium font(sans:Poppins)"
+        >
+          Maison Luxe
+        </a>
+
+        <ul
+          class="hidden lg:flex items-center gap-1 text-sm font-medium text-white justify-evenly pl-[300px]"
+        >
+          <li>
+            <a
+              href="index.html"
+              class="px-3 py-2 text-[#303030] hover:text-[#181818] transition-colors"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="shop.html"
+              class="px-3 py-2 text-[#303030] hover:text-[#181818] transition-colors"
+              >Shop</a
+            >
+          </li>
+          <li>
+            <a
+              class="px-3 py-2 text-[#303030] hover:text-[#181818] transition-colors"
+              >Collections</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" class="px-3 py-2 text-[#303030] hover:text-[#181818]">Contact</a>
+          </li>
+
+          <li
+            class="border border-[#303030] rounded-full px-6 py-2 w-full justify-center"
+          >
+            <input
+              type="text"
+              placeholder="Search for your product"
+              class="outline-none pl-2 text-[#303030] bg-transparent"
+            />
+            <i class="fa-solid fa-magnifying-glass text-[#303030]"></i>
+          </li>
+
+          <ul
+            class="ml-[15px] lg:flex items-center gap-6 font-medium text-white justify-evenly"
+          >
+            <li class="flex gap-5 justify-center">
+              <i
+                class="fa-regular fa-heart text-[#303030] hover:text-[#181818]"
+              ></i>
+            </li>
+            <li>
+              <a href="login.html"
+                ><i
+                  class="fa-regular fa-user text-[#303030] hover:text-[#181818]"
+                ></i
+              ></a>
+            </li>
+            <li>
+              <i
+                class="fa-solid fa-cart-shopping text-[#303030] hover:text-[#181818]"
+              ></i>
+            </li>
+          </ul>
+        </ul>
+
+        <!-- for Hamburger right Button -->
+        <label
+          for="menu-toggle"
+          class="lg:hidden text-[#181818] text-xl cursor-pointer"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </label>
+      </div>
+
+      <input type="checkbox" id="menu-toggle" class="hidden peer" />
+
+      <!-- mobile dropdown menu -->
+      <div class="hidden peer-checked:block lg:hidden bg-[#FDF9F4] px-6 py-4">
+        <ul class="flex flex-col gap-5 mb-3 text-sm font-medium">
+          <li>
+            <a
+              href="index.html"
+              class="text-[#303030] hover:text-[#181818] font-semibold"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-[#303030] hover:text-[#181818] font-semibold"
+              >Collections</a
+            >
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="text-[#303030] hover:text-[#181818] font-semibold"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a
+              href="cart.html"
+              class="bg-[#271C19] hover:bg-[#60463B] text-[#fdf9f4] hover:text-[#fdf9f4] px-6 py-2 rounded-lg text-xs font-semibold inline-block text-center w-full"
+              >Cart</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="m-[20px] m-auto w-95% bg-blue-200 pb-[50px] pt-[50px]">
+      <div class="m-auto w-[400px] bg-white h-[400px] rounded-lg">
+        <div class="mx-auto p-6">
+          <h1 class="text-[26px] font-bold text-center text-black">
+            Shoping Cart
+          </h1>
+          <p class="text-[16px] font-medium text-center mb-8 text-black">
+            Your Selected Items
+          </p>
+        </div>
+        <!-- cart-items -->
+
+        <div
+          id="cartItemS"
+          class="text-lg justify-between flex font-semibold p-6"
+        >
+          <div id="getProduct"></div>
+
+          <div class="">
+            <button class="bg-blue-200 p-2 rounded-sm h-[40px] w-[40px]">
+              -
+            </button>
+            <span class="">1</span>
+            <button class="bg-blue-200 p-2 rounded-sm h-[40px] w-[40px]">
+              +
+            </button>
+          </div>
+        </div>
+
+        <!-- cart-summary -->
+        <div id="cartSummary" class="bg-white p-6 rounded-sm">
+          <div class="text-lg justify-between flex font-semibold">
+            <span>Total</span><span id="cartTotal">$0.00</span>
+          </div>
+        </div>
+        <div
+          class="flex flex-row gap-4 p-6 justify-items-center justify-between"
+        >
+          <button id="clearProduct" class="bg-red-500 p-3 px-8 rounded-lg">
+            ClearCart
+          </button>
+          <button id="checkout" class="bg-blue-500 p-3 px-8 rounded-lg">
+            CheckOut
+          </button>
+        </div>
+      </div>
+
+      <!-- cleared cart -->
+      <div id="emptyCart"
+        class="hidden mx-auto w-[400px] p-6 h-[200px] justify-items-center text-center rounded-sm"
+      >
+        <h2 class="text-[26px] font-medium pb-[5px]">Shopping Cart</h2>
+        <p class="text-[18px] font-medium pb-[40px]">Your cart is empty</p>
+        <a
+          href="shop.html"
+          class="bg-[#271C19] hover:bg-[#60463B] text-[14px] px-4 py-3 rounded-sm text-[#fdf9f4] hover:text-[#fdf9f4] font-medium"
+          >Shop Now</a
+        >
+      </div>
+    </section>
+    <section id="product"></section>
+    <footer class="bg-[#2a2a2a] text-[10px] text-white">
+      <div class="max-w-7xl mx-auto px-10 py-16 justify-between">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-14">
+          <div>
+            <h2 class="text-2xl font-bold mb-5 text-white">Maisone Luxe</h2>
+            <p class="text-white text-sm leading-relaxed mb-6">
+              A curated boutique of timeless silhouettes, soft textures and
+              effortless femininity — made for the woman who dresses with
+              intention.
+            </p>
+            <p class="font-semibold text-base mb-3">Follow Our Socials</p>
+
+            <div class="flex gap-3 flex-wrap">
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full border border-[#BDA06E] flex items-center justify-center text-white hover:bg-[#e8412a] hover:border-[#e8412a] hover:text-white transition-all text-sm"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full border border-[#BDA06E] flex items-center justify-center text-white hover:bg-[#e8412a] hover:border-[#e8412a] hover:text-white transition-all text-sm"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full border border-[#BDA06E] flex items-center justify-center text-white hover:bg-[#e8412a] hover:border-[#e8412a] hover:text-white transition-all text-sm"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full border border-[#BDA06E] flex items-center justify-center text-white hover:bg-[#e8412a] hover:border-[#e8412a] hover:text-white transition-all text-sm"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+
+          <div>
+            <h5 class="text-base font-semibold mb-2">Shop</h5>
+            <div class="w-8 h-0.5 bg-[#BDA06E] mb-5"></div>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href=""
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >New Arrival</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >Best Sellers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >Accessories</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >Beauty</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >Sales</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="text-base font-semibold mb-2">Customer Care</h5>
+            <div class="w-8 h-0.5 bg-[#BDA06E] mb-5"></div>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href=""
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                >
+                  Shipping
+                </a>
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >Returns</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >Size Guide</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >FAQs</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="text-base font-semibold mb-2">Company</h5>
+            <div class="w-8 h-0.5 bg-[#BDA06E] mb-5"></div>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >Our Story</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                >
+                  Journal
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >Stores</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >Sustainability</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white text-sm hover:text-[#BDA06E] flex items-center gap-2 transition-colors"
+                  >Careers</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-[#2a2a2a] border-t border-[#BDA06E]">
+        <div
+          class="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-white"
+        >
+          <p class="text-[12px]">
+            &copy; 2026 Maison Atelier. All rights reserved.
+          </p>
+          <div class="flex flex-col md:flex-row text-[12px] items-center gap-4">
+            <div class="flex flex-wrap justify-center gap-4">
+              <a href="#" class="hover:text-white transition-colors"
+                >Privacy Policy</a
+              >
+              <a href="#" class="hover:text-white transition-colors"
+                >Terms of Service</a
+              >
+              <a href="#" class="hover:text-white transition-colors"
+                >Cookie Policy</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="cart.js"></script>
+  </body>
+</html>
