@@ -34,20 +34,7 @@ function createAccount() {
 }
 
 
-// let form = document.querySelector('#myForm');
 
-// form.addEventListener("submit", function(e){
-//     let userName = form["name"].value;
-//     let userMail = form["mail"].value;
-//     let userPassword = form["password"].value;
-
-//     let messageDisplay = document.getElementById("message");
-
-//     if (userName.value.trim() === "") {
-//     messageDisplay.textContent = "Kindly fill in your details";
-//     messageDisplay.classList.remove("hidden");
-//   }
-// })
 
 
 
