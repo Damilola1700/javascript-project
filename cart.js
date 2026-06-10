@@ -5,7 +5,6 @@ let cartSection = document.getElementById("cartSection");
 
 let cart = JSON.parse(localStorage.getItem("mycart")) || [];
 
-// Display cart
 function renderCart() {
   if (cart.length === 0) {
     emptyCart.classList.remove("hidden");
@@ -22,7 +21,7 @@ function renderCart() {
   let total = 0;
 
   let cartItemsHTML = cart.map((value, i) => {
-    total += value.price * value.quantity;
+  total += value.price * value.quantity;
 
     return `
       <div class="m-[40px] m-auto flex-col items-center mb-6">
@@ -72,7 +71,7 @@ function renderCart() {
   cartTotal.textContent = "$" + total.toFixed(2);
 }
 
-// Remove item
+
 function removeItem(index) {
   cart.splice(index, 1);
 
@@ -81,7 +80,6 @@ function removeItem(index) {
   renderCart();
 }
 
-// Increase quantity
 function increase(index) {
   cart[index].quantity++;
 
@@ -90,7 +88,7 @@ function increase(index) {
   renderCart();
 }
 
-// Decrease quantity
+
 function decrease(index) {
   if (cart[index].quantity > 1) {
     cart[index].quantity--;
@@ -103,6 +101,5 @@ function decrease(index) {
   renderCart();
 }
 
-// Initial render
-renderCart();
 
+renderCart();
