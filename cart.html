@@ -15,9 +15,9 @@
       <div class="mx-auto px-4 py-4 flex items-center justify-around">
         <a
           href="index.html"
-          class="text-[#181818] text-[18px] font-medium font(sans:Poppins)"
+          class="text-[#181818] text-[18px] font-semibold font(sans:Poppins)"
         >
-          Maison Luxe
+          ShopExtra
         </a>
 
         <ul
@@ -44,7 +44,11 @@
             >
           </li>
           <li>
-            <a href="contact.html" class="px-3 py-2 text-[#303030] hover:text-[#181818]">Contact</a>
+            <a
+              href="contact.html"
+              class="px-3 py-2 text-[#303030] hover:text-[#181818]"
+              >Contact</a
+            >
           </li>
 
           <li
@@ -127,9 +131,11 @@
       </div>
     </nav>
 
-    <section class="m-[20px] m-auto w-95% g-blue-200 pb-[50px] pt-[50px] bg-[#fdf9f4]">
-      <div class="m-auto w-[400px] bg-white h-[400px] rounded-lg shadow-md">
-        <div class="mx-auto p-6 ">
+    <section id="cartSection"
+      class=" hidden p-[20px]  bg-blue-200 pb-[50px] pt-[50px] bg-[#fdf9f4 "
+    >
+      <div class="p-[60px] mx-auto lg:w-[800px] sm:w-95% md:w-95% bg-white  h-[800px rounded-lg shadow-md">
+        <div class="mx-auto p-6">
           <h1 class="text-[26px] font-bold text-center text-black">
             Shoping Cart
           </h1>
@@ -140,21 +146,8 @@
         <!-- cart-items -->
 
         <div
-          id="cartItemS"
-          class="text-lg justify-between flex font-semibold p-6"
-        >
-          <div id="getProduct"></div>
-
-          <div class="">
-            <button class="bg-blue-200 p-2 rounded-sm h-[40px] w-[40px]">
-              -
-            </button>
-            <span class="">1</span>
-            <button class="bg-blue-200 p-2 rounded-sm h-[40px] w-[40px]">
-              +
-            </button>
-          </div>
-        </div>
+          id="cartItemsHTML"
+          class=" "></div>
 
         <!-- cart-summary -->
         <div id="cartSummary" class="bg-white p-6 rounded-sm">
@@ -175,24 +168,29 @@
       </div>
 
       <!-- cleared cart -->
-      <div id="emptyCart"
-        class="hidden mx-auto w-[400px] p-6 h-[200px] justify-items-center text-center rounded-sm"
-      >
-        <h2 class="text-[26px] font-medium pb-[5px]">Shopping Cart</h2>
-        <p class="text-[18px] font-medium pb-[40px]">Your cart is empty</p>
-        <a
-          href="shop.html"
-          class="bg-[#271C19] hover:bg-[#60463B] text-[14px] px-4 py-3 rounded-sm text-[#fdf9f4] hover:text-[#fdf9f4] font-medium"
-          >Shop Now</a
-        >
-      </div>
+      
+        
+      
     </section>
+
+    <div
+          id="emptyCart"
+          class=" hidden mx-auto w-[400px] p-6 h-[200px] justify-items-center text-center rounded-sm"
+        >
+          <h2 class="text-[26px] font-medium pb-[5px]">Shopping Cart</h2>
+          <p class="text-[18px] font-medium pb-[40px]">Your cart is empty</p>
+          <a
+            href="shop.html"
+            class="bg-[#271C19] hover:bg-[#60463B] text-[14px] px-4 py-3 rounded-sm text-[#fdf9f4] hover:text-[#fdf9f4] font-medium"
+            >Shop Now</a
+          >
+        </div>
     <section id="product"></section>
     <footer class="bg-[#2a2a2a] text-[10px] text-white">
       <div class="max-w-7xl mx-auto px-10 py-16 justify-between">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-14">
           <div>
-            <h2 class="text-2xl font-bold mb-5 text-white">Maisone Luxe</h2>
+            <h2 class="text-2xl font-bold mb-5 text-white">ShopExtra</h2>
             <p class="text-white text-sm leading-relaxed mb-6">
               A curated boutique of timeless silhouettes, soft textures and
               effortless femininity — made for the woman who dresses with

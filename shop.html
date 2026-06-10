@@ -9,30 +9,21 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-
-    <style>
-      #menu-toggle {
-        display: none;
-      }
-      #menu-toggle:checked ~ #mobile-menu {
-        display: block;
-      }
-      .dropdown:hover .dropdown-menu {
-        display: block;
-      }
-      .dropdown-menu {
-        display: none;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    
   </head>
   <body class="font-serif">
     <nav class="z-10 top-0 sticky w-full text-white bg-[#FDF9F4]">
       <div class="mx-auto px-4 py-4 flex items-center justify-around">
         <a
           href="index.html"
-          class="text-[#181818] text-[18px] font-medium font(sans:Poppins)"
+          class="text-[#181818] text-[18px] font-semibold font(sans:Poppins)"
         >
-          Maison Luxe
+          ShopExtra
         </a>
 
         <ul
@@ -100,7 +91,6 @@
 
                 <p
                   id="cartNumber"
-                 
                   class="absolute -top-2 -right-2 hidde bg-red-500 text-white text-[13px] w-4 h-4 flex items-center justify-center rounded-full"
                 >
                   0
@@ -186,7 +176,7 @@
       <div class="max-w-7xl mx-auto px-10 py-16 justify-between items-center">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-14">
           <div>
-            <h2 class="text-2xl font-bold mb-5 text-white">Maisone Luxe</h2>
+            <h2 class="text-2xl font-bold mb-5 text-white">ShopExtra</h2>
             <p class="text-white text-sm leading-relaxed mb-6">
               A curated boutique of timeless silhouettes, soft textures and
               effortless femininity — made for the woman who dresses with
@@ -373,5 +363,6 @@
     </footer>
 
     <script src="shop.js"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   </body>
 </html>
